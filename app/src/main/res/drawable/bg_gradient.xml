@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    linear-gradient(180deg, #6F2162 0%, #FF16DA 100%)-->
+    <gradient
+        android:startColor="#6F2162"
+        android:endColor="#FF16DA"
+        android:angle="270"
+        />
+</shape>

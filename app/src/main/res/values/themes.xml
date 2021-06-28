@@ -21,4 +21,10 @@
     <style name="GreenButtonThemeOverlay">
         <item name="colorPrimary">#CCC</item>
     </style>
+
+    <style name="SplashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:statusBarColor">@color/tawnyPort</item>
+
+    </style>
 </resources>
