@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SAT Vocabulary</string>
+    <string name="black_palm_face_emoji">🤦🏿‍♀️</string>
+    <string name="happy_face_emoji">😀</string>
+    <string name="tab">\u0009</string>
+    <string name="custom_definition"><i>v.</i> to make suit a new purpose\n<i>\tThe US has adapted many foreign foods to better suit the tastes of Americans.</i>\n\n<i>v.</i> to accommodate oneself to a new condition, setting, or situation\n\t<i>Dogs are known for their ability to quickly adapt to their environments.</i></string>
+</resources>

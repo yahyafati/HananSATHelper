@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "289855383933",
+    "project_id": "sat-vocabulary-68f1a",
+    "storage_bucket": "sat-vocabulary-68f1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289855383933:android:54d5a64807bb9f12c24414",
+        "android_client_info": {
+          "package_name": "com.urinapa.satvocabulary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289855383933-ri3ukm4eskmaaa9ikn1lhsr2bodaicf9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcKazWoEqWsxmd34-4tCOIAGCMyxEvbWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289855383933-ri3ukm4eskmaaa9ikn1lhsr2bodaicf9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
