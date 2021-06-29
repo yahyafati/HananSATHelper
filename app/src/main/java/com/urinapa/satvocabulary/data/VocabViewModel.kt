@@ -4,7 +4,9 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.urinapa.satvocabulary.DataClass
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 class VocabViewModel(application: Application) : AndroidViewModel(application) {
@@ -40,6 +42,14 @@ class VocabViewModel(application: Application) : AndroidViewModel(application) {
     fun deleteAllVocabs() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteAllVocabs()
+        }
+    }
+
+    fun getAllVocabularies(): Job {
+        lateinit var vocabularies: List<Vocab>;
+        return viewModelScope.launch(Dispatchers.IO) {
+            vocabularies = repository.getAllVocabularies()
+            DataClass.vocabList = vocabularies
         }
     }
 }

@@ -4,4 +4,18 @@
     <string name="happy_face_emoji">😀</string>
     <string name="tab">\u0009</string>
     <string name="custom_definition"><i>v.</i> to make suit a new purpose\n<i>\tThe US has adapted many foreign foods to better suit the tastes of Americans.</i>\n\n<i>v.</i> to accommodate oneself to a new condition, setting, or situation\n\t<i>Dogs are known for their ability to quickly adapt to their environments.</i></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="word_of_the_day">Word of the day</string>
+    <string name="sat_helper">Sat Helper</string>
+    <string name="hanan">Hanan</string>
+    <string name="start">Start</string>
+    <string name="wordlist">Wordlist</string>
+    <string name="quit">Quit</string>
+    <string name="did_you_get_it">Did you get it?</string>
+    <string name="how_many_rounds">How many rounds?</string>
+    <string name="_10_rounds">10</string>
+    <string name="_50_rounds">50</string>
+    <string name="_25_rounds">25</string>
+    <string name="_100_rounds">100</string>
 </resources>

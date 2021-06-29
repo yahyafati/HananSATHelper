@@ -22,4 +22,8 @@ class VocabRepository(private val vocabDao: VocabDao) {
     suspend fun deleteAllVocabs() {
         vocabDao.deleteAllVocabs()
     }
+
+    suspend fun getAllVocabularies() : List<Vocab> {
+        return vocabDao.getAllVocabularies()
+    }
 }

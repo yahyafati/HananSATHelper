@@ -21,6 +21,9 @@ interface VocabDao {
     @Query("SELECT * from vocabularies")
     fun readAllData(): LiveData<List<Vocab>>
 
+    @Query("SELECT * from vocabularies")
+    suspend fun getAllVocabularies(): List<Vocab>
+
     @Query("SELECT count(*) from vocabularies")
     fun countVocabs() : LiveData<Int>
 

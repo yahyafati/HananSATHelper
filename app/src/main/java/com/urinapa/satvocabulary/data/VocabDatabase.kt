@@ -24,7 +24,8 @@ abstract class VocabDatabase : RoomDatabase() {
                     context.applicationContext,
                     VocabDatabase::class.java,
                     "vocab_database"
-                ).build()
+                ).createFromAsset("database/vocab_database.db")
+                    .build()
                 INSTANCE = instance
                 return instance
             }

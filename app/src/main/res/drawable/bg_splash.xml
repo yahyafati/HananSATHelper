@@ -6,6 +6,6 @@
     <item
         android:drawable="@drawable/ic_splashscreentext"
         android:gravity="center"
-        android:top="100dp"
+        android:top="-180dp"
         />
 </layer-list>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".RoundDialogFragment"
+    android:background="@drawable/corner_radius_20dp"
+    android:padding="12dp"
+    >
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="@string/how_many_rounds"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_round_10"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/game_round_top_left"
+        android:fontFamily="@font/aquire"
+        android:text="@string/_10_rounds"
+        android:textColor="@color/tawnyPort"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_round_25"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caption" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_round_25"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/game_round_top_right"
+        android:fontFamily="@font/aquire"
+        android:text="@string/_25_rounds"
+        android:textColor="@color/tawnyPort"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_round_10"
+        app:layout_constraintTop_toTopOf="@+id/btn_round_10" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_round_50"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/game_round_bottom_left"
+        android:fontFamily="@font/aquire"
+        android:text="@string/_50_rounds"
+        android:textColor="@color/tawnyPort"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_round_100"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_round_10" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_round_100"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/game_round_bottom_right"
+        android:fontFamily="@font/aquire"
+        android:text="@string/_100_rounds"
+        android:textColor="@color/tawnyPort"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_round_50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_round_50" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,7 @@ object DataClass {
 
     var vocabList = emptyList<Vocab>()
 
+    fun getVocabularies() : Set<Vocab> {
+        return emptySet()
+    }
 }
