@@ -1,11 +1,14 @@
 package com.urinapa.satvocabulary
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 
 class GameOverFragment : Fragment() {
@@ -27,6 +30,11 @@ class GameOverFragment : Fragment() {
         val total = args.questions!!.vocabularies.count()
         val text = "You have got $score out of $total"
         view.findViewById<TextView>(R.id.tv_score_text).text = text
+
+        Handler(Looper.myLooper()!!).postDelayed({
+            val action = GameOverFragmentDirections.actionGameOverFragmentToHomeFragment()
+            findNavController().navigate(action)
+        }, 2000)
     }
 
 }

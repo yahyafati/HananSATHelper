@@ -76,9 +76,7 @@
                 android:fontFamily="@font/aquire"
                 android:text="@string/word_of_the_day"
                 android:textColor="@color/tawnyPort"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toTopOf="@+id/textView2"
-                app:layout_constraintStart_toStartOf="@+id/textView2" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_word_of_day"
@@ -86,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:text="Adapt"
+                tools:text="Adapt"
                 android:fontFamily="@font/montserrat_semi_bold"/>
 
             <TextView
@@ -95,7 +93,7 @@
                 android:layout_height="72dp"
                 android:overScrollMode="always"
                 android:fontFamily="@font/montserrat_regular"
-                android:text="v. to make suit a new purpose v. to accommodate oneself to a new condition, setting, or situation" />
+                tools:text="v. to make suit a new purpose v. to accommodate oneself to a new condition, setting, or situation" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
