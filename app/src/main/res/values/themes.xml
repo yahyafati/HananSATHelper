@@ -14,14 +14,17 @@
         <!-- Customize your theme here. -->
     </style>
     
-    <style name="Widget.App.ButtonStyle" parent="Widget.MaterialComponents.Button">
-        <item name="materialThemeOverlay">@style/GreenButtonThemeOverlay</item>
-    </style>
+<!--    <style name="Widget.App.ButtonStyle" parent="Widget.MaterialComponents.Button">-->
+<!--        <item name="materialThemeOverlay">@style/GreenButtonThemeOverlay</item>-->
+<!--    </style>-->
 
-    <style name="GreenButtonThemeOverlay">
-        <item name="colorPrimary">#CCC</item>
-    </style>
+<!--    <style name="GreenButtonThemeOverlay">-->
+<!--        <item name="colorPrimary">#CCC</item>-->
+<!--    </style>-->
 
+    <style name="Widget.AppCompat.NormalButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/white</item>
+    </style>
     <style name="SplashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/bg_splash</item>
         <item name="android:statusBarColor">@color/tawnyPort</item>

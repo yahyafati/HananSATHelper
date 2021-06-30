@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.FragmentManager
@@ -31,8 +32,6 @@ class HomeFragment : Fragment(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mVocabViewModel = ViewModelProvider(this).get(VocabViewModel::class.java)
-
-
     }
 
     override fun onCreateView(
@@ -62,7 +61,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                 tvWordOfDay.text = wordOfDay.word
                 tvDefinitionOfDay.text = wordOfDay.formatDefinition()
 
-                view.setOnClickListener {
+                view.findViewById<LinearLayout>(R.id.ll_word_display).setOnClickListener {
                     val wordDefinitionDialogFragment = WordDefinitionDialogFragment(wordOfDay)
                     wordDefinitionDialogFragment.show(parentFragmentManager, "WordDefinitionDialogFragment")
                 }

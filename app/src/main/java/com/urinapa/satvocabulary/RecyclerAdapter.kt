@@ -51,11 +51,10 @@ class RecyclerAdapter(val parent: Fragment, val etSearch: EditText): RecyclerVie
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvWordlistItem: TextView
+        var tvWordlistItem: TextView = itemView.findViewById(R.id.tv_wordlist_item)
         lateinit var vocab: Vocab
 
         init {
-            tvWordlistItem = itemView.findViewById(R.id.tv_wordlist_item)
             itemView.setOnClickListener {
                 val wordDefinitionDialogFragment = WordDefinitionDialogFragment(vocab)
                 wordDefinitionDialogFragment.show(parent.parentFragmentManager, "WordDefinitionDialogFragment")
