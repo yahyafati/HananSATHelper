@@ -1,11 +1,15 @@
 package com.urinapa.satvocabulary
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import androidx.core.widget.addTextChangedListener
+import androidx.core.widget.doAfterTextChanged
+import androidx.core.widget.doOnTextChanged
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -30,6 +34,13 @@ class WordListFragment : Fragment() {
 
         val layoutManager = LinearLayoutManager(requireContext())
         rvWordList.layoutManager = layoutManager
-        rvWordList.adapter = RecyclerAdapter(this)
+        val adapter = RecyclerAdapter(this, etSearch)
+        rvWordList.adapter = adapter
+        etSearch.doAfterTextChanged {
+            Log.i("SEARCHVALUE", etSearch.text.toString())
+            adapter.filterData()
+            adapter.notifyDataSetChanged()
+        }
+
     }
 }

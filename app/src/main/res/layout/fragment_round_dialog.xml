@@ -7,6 +7,7 @@
     tools:context=".RoundDialogFragment"
     android:background="@drawable/corner_radius_20dp"
     android:padding="12dp"
+    android:minWidth="320dp"
     >
 
     <TextView

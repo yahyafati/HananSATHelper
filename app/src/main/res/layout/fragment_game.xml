@@ -61,6 +61,7 @@
                     android:scrollbars="vertical"
                     android:fontFamily="@font/montserrat_medium"
                     android:text="@string/custom_definition"
+                    android:textIsSelectable="true"
                     android:textSize="16sp"
                     android:gravity="center_vertical"
                     app:layout_constraintBottom_toBottomOf="parent"

@@ -32,6 +32,8 @@ class WordDefinitionDialogFragment(val vocab: Vocab) : DialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val tvWordlistDefinition = view.findViewById<TextView>(R.id.tv_wordlist_definition)
+        tvWordlistDefinition.setTextIsSelectable(true)
+
         view.findViewById<TextView>(R.id.tv_wordlist_word).text = vocab.word
         tvWordlistDefinition.text = vocab.formatDefinition()
         tvWordlistDefinition.movementMethod = ScrollingMovementMethod()

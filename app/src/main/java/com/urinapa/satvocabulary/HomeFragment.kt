@@ -58,12 +58,14 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
         mVocabViewModel.getAllVocabularies().invokeOnCompletion {
             val wordOfDay = DataClass.vocabList.random()
-            tvWordOfDay.text = wordOfDay.word
-            tvDefinitionOfDay.text = wordOfDay.formatDefinition()
+            activity?.runOnUiThread {
+                tvWordOfDay.text = wordOfDay.word
+                tvDefinitionOfDay.text = wordOfDay.formatDefinition()
 
-            view.setOnClickListener {
-                val wordDefinitionDialogFragment = WordDefinitionDialogFragment(wordOfDay)
-                wordDefinitionDialogFragment.show(parentFragmentManager, "WordDefinitionDialogFragment")
+                view.setOnClickListener {
+                    val wordDefinitionDialogFragment = WordDefinitionDialogFragment(wordOfDay)
+                    wordDefinitionDialogFragment.show(parentFragmentManager, "WordDefinitionDialogFragment")
+                }
             }
         }
 
