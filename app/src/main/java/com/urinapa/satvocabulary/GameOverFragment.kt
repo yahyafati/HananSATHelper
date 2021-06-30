@@ -8,12 +8,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import kotlin.math.roundToInt
 
 class GameOverFragment : Fragment() {
 
     private val args: GameFragmentArgs by navArgs()
+    private val adjectives = bundleOf(
+        "4" to listOf("Excellent", "Superb", "Outstanding", "Magnificent", "Exceptional", "Perfect"),
+        "3" to listOf("Marvellous", "Wonderful", "Sublime", "Fantastic"),
+        "2" to listOf("Good", "Amazing", "Satisfactory", "Awesome"),
+        "1" to listOf("Next Time"),
+        "0" to listOf("Study Hard")
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,13 +37,15 @@ class GameOverFragment : Fragment() {
 
         val score = args.questions!!.vocabularies.filter { it.correct }.count()
         val total = args.questions!!.vocabularies.count()
+        val percentile = ((score/total.toFloat())*4).roundToInt()
         val text = "You have got $score out of $total"
         view.findViewById<TextView>(R.id.tv_score_text).text = text
+        view.findViewById<TextView>(R.id.tv_score_adjective).text = (adjectives[percentile.toString()] as List<*>).random() as String
 
         Handler(Looper.myLooper()!!).postDelayed({
             val action = GameOverFragmentDirections.actionGameOverFragmentToHomeFragment()
             findNavController().navigate(action)
-        }, 2000)
+        }, 3000)
     }
 
 }

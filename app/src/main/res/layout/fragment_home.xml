@@ -13,6 +13,8 @@
         android:text="@string/start"
         android:background="@drawable/start_btn"
 
+        android:fontFamily="@font/aquire_bold"
+        android:textSize="18sp"
 
         app:layout_constraintBottom_toTopOf="@+id/btn_wordlist"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +32,9 @@
         android:text="@string/wordlist"
         android:background="@drawable/wordlist_btn"
 
+        android:fontFamily="@font/aquire_bold"
+        android:textSize="18sp"
+
         app:layout_constraintBottom_toTopOf="@+id/btn_quit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -42,6 +47,9 @@
         android:layout_height="wrap_content"
         android:text="@string/quit"
         android:background="@drawable/quit_btn"
+
+        android:fontFamily="@font/aquire_bold"
+        android:textSize="18sp"
 
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,15 +76,15 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/aquire"
-                android:text="@string/word_of_the_day"
-                android:textColor="@color/tawnyPort"
-                android:textSize="18sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:fontFamily="@font/aquire"-->
+<!--                android:text="@string/word_of_the_day"-->
+<!--                android:textColor="@color/tawnyPort"-->
+<!--                android:textSize="18sp" />-->
 
             <TextView
                 android:id="@+id/tv_word_of_day"
@@ -85,13 +93,13 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 tools:text="Adapt"
-                android:fontFamily="@font/montserrat_semi_bold"/>
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:id="@+id/tv_definition_of_day"
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
-                android:overScrollMode="always"
                 android:fontFamily="@font/montserrat_regular"
                 tools:text="v. to make suit a new purpose v. to accommodate oneself to a new condition, setting, or situation" />
         </LinearLayout>

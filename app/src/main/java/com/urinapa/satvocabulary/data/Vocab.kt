@@ -20,7 +20,7 @@ class Vocab(
         val exampleList = example.split("\n")
         var definition = ""
         for (i in definitionList.indices) {
-            definition += "${definitionList[i]}\n\t${exampleList[i]}\n\n"
+            definition += "${definitionList[i]}\n        ${exampleList[i]}\n\n"
         }
         return definition
     }
