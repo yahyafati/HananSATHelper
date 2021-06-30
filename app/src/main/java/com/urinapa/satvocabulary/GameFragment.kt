@@ -62,7 +62,9 @@ class GameFragment : Fragment(), View.OnClickListener {
 
     /**
      * @param to
+     *
      * 1 - to Definition
+     *
      * 2 - to Word
      */
     private fun rotate(to: Int) {
@@ -90,22 +92,12 @@ class GameFragment : Fragment(), View.OnClickListener {
 
         args.questions?.vocabularies?.get(args.currentIndex)?.correct = v?.id == R.id.btn_got_it
 
-//        when (v?.id) {
-//            R.id.btn_forgot_it -> {
-//                args.questions?.vocabularies?.get(args.currentIndex)?.correct = false
-//            }
-//            R.id.btn_got_it -> {
-//                args.questions?.vocabularies?.get(args.currentIndex)?.correct = true
-//            }
-//        }
-
         if (args.currentIndex+1 < args.questions?.vocabularies?.size!!) {
             val action = GameFragmentDirections.actionGameFragmentSelf(args.questions, args.currentIndex+1)
             findNavController().navigate(action)
         } else {
             val action = GameFragmentDirections.actionGameFragmentToGameOverFragment(args.questions!!)
             findNavController().navigate(action)
-//            Snackbar.make(v!!, "Last Item", Snackbar.LENGTH_LONG).show()
         }
     }
 }
